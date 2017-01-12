@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E70-0n-8lq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calendar-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="Calendar" id="vXZ-lx-hvc" customClass="CalendarViewController" customModule="Advent__16" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="RIS-ae-fBS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="t50-Wu-mfm">
+                                <rect key="frame" x="0.0" y="64" width="375" height="595"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Advent ‘16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f8i-ga-qyS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="aoG-8B-a4j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="42"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="8AN-Pv-h4P">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="504"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="countdownLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l4M-Ff-e9c" userLabel="Countdown Label">
+                                        <rect key="frame" x="63.5" y="556" width="248" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="248" id="6HP-uZ-u41"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="“Hope, Peace, Joy, Love”" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7R-UO-nbE">
+                                        <rect key="frame" x="9" y="558" width="357.5" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="please tap a day to read its lectionary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ba-Ul-Bgi" userLabel="(please tap a day to read its lectionary)">
+                                        <rect key="frame" x="17" y="560" width="341" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="341" id="WrN-mA-WQD"/>
+                                            <constraint firstAttribute="height" constant="35" id="xOi-py-sFP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="f8i-ga-qyS" firstAttribute="leading" secondItem="t50-Wu-mfm" secondAttribute="leading" id="etr-P6-Yz2"/>
+                                    <constraint firstItem="8AN-Pv-h4P" firstAttribute="leading" secondItem="t50-Wu-mfm" secondAttribute="leading" id="qTz-h0-H41"/>
+                                    <constraint firstAttribute="trailing" secondItem="f8i-ga-qyS" secondAttribute="trailing" id="tZH-fz-cAx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="t50-Wu-mfm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7lM-Eh-esP"/>
+                            <constraint firstItem="t50-Wu-mfm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9mA-4y-JYx"/>
+                            <constraint firstItem="RIS-ae-fBS" firstAttribute="leading" secondItem="t50-Wu-mfm" secondAttribute="leading" id="ALQ-7G-FaX"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="t50-Wu-mfm" secondAttribute="bottom" constant="8" symbolic="YES" id="FC8-Dm-pLz"/>
+                            <constraint firstAttribute="trailing" secondItem="t50-Wu-mfm" secondAttribute="trailing" id="PwP-Zu-pzJ"/>
+                            <constraint firstItem="t50-Wu-mfm" firstAttribute="trailing" secondItem="RIS-ae-fBS" secondAttribute="trailing" id="R1l-rU-MxW"/>
+                            <constraint firstItem="RIS-ae-fBS" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="Suv-WI-I2i"/>
+                            <constraint firstItem="RIS-ae-fBS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="WQV-WF-dJ9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dvy-tG-mvl">
+                        <barButtonItem key="backBarButtonItem" title="Calendar" id="HsT-hC-tL3"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countdownLabel" destination="l4M-Ff-e9c" id="mPU-ym-9oS"/>
+                        <outlet property="placeholderView" destination="8AN-Pv-h4P" id="7PC-zV-eUj"/>
+                        <segue destination="4tH-dO-r9E" kind="show" identifier="calendarToLectionary" id="sXf-Yv-UN8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="724"/>
+        </scene>
+        <!--Lectionary-->
+        <scene sceneID="abo-6a-61E">
+            <objects>
+                <viewController storyboardIdentifier="Lectionary View Controller" title="Lectionary" id="4tH-dO-r9E" customClass="LectionaryViewController" customModule="Advent__16" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p4N-YH-0j4"/>
+                        <viewControllerLayoutGuide type="bottom" id="BlI-9K-Kkc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jbw-e6-crL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dayTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XIH-Cy-hWw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                <color key="textColor" red="0.39215686274509803" green="0.058823529411764705" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dayLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-BT-1RK">
+                                <rect key="frame" x="-4" y="100" width="383" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                <color key="textColor" red="0.3921568627" green="0.058823529409999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt3-cy-mZj">
+                                <rect key="frame" x="0.0" y="131" width="600" height="468.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Id9-H8-wtQ">
+                                        <rect key="frame" x="8" y="0.0" width="367" height="407.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Collect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Da-St-RaL">
+                                                <rect key="frame" x="0.0" y="0.0" width="367" height="24"/>
+                                                <color key="backgroundColor" red="0.3921568627" green="0.058823529409999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collectBodyTextLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kM4-zw-Ku1">
+                                                <rect key="frame" x="0.0" y="29" width="367" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Old Testament" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDp-4K-HLt">
+                                                <rect key="frame" x="0.0" y="57" width="367" height="24"/>
+                                                <color key="backgroundColor" red="0.3921568627" green="0.058823529409999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oldTestamentTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nbu-xE-eoE">
+                                                <rect key="frame" x="0.0" y="86" width="367" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oldTestamentBodyTextLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YE-KR-W8p">
+                                                <rect key="frame" x="0.0" y="111.5" width="367" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Response" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPK-uw-ieB">
+                                                <rect key="frame" x="0.0" y="139.5" width="367" height="24"/>
+                                                <color key="backgroundColor" red="0.3921568627" green="0.058823529409999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="psalmTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="5BI-xd-qYN">
+                                                <rect key="frame" x="0.0" y="168.5" width="367" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="psalmSubtitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EzR-nO-yl8">
+                                                <rect key="frame" x="0.0" y="194" width="367" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="psalmBodyTextLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CN9-Ft-5Gd">
+                                                <rect key="frame" x="0.0" y="219.5" width="367" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Epistle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6J-Gx-iJd">
+                                                <rect key="frame" x="0.0" y="247.5" width="367" height="24"/>
+                                                <color key="backgroundColor" red="0.3921568627" green="0.058823529409999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="epistleTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y8W-a2-M7I">
+                                                <rect key="frame" x="0.0" y="276.5" width="367" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="epistleBodyTextLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9R-UB-eUQ">
+                                                <rect key="frame" x="0.0" y="302" width="367" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Gospel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UL-mi-lZK">
+                                                <rect key="frame" x="0.0" y="330" width="367" height="24"/>
+                                                <color key="backgroundColor" red="0.3921568627" green="0.058823529409999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gospelTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="goF-6c-q8L">
+                                                <rect key="frame" x="0.0" y="359" width="367" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gospelBodyTextLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3v9-Dp-hwb">
+                                                <rect key="frame" x="0.0" y="384.5" width="367" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Id9-H8-wtQ" secondAttribute="bottom" id="7Ih-wz-UbR"/>
+                                    <constraint firstItem="Id9-H8-wtQ" firstAttribute="leading" secondItem="nt3-cy-mZj" secondAttribute="leading" constant="8" id="Q6X-4u-Q8t"/>
+                                    <constraint firstItem="Id9-H8-wtQ" firstAttribute="top" secondItem="nt3-cy-mZj" secondAttribute="top" id="dtN-ao-Tfi"/>
+                                    <constraint firstItem="Id9-H8-wtQ" firstAttribute="width" secondItem="nt3-cy-mZj" secondAttribute="width" constant="-16" id="hjb-VK-bES"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XIH-Cy-hWw" firstAttribute="top" secondItem="p4N-YH-0j4" secondAttribute="bottom" id="01d-MW-mwC"/>
+                            <constraint firstItem="XIH-Cy-hWw" firstAttribute="bottom" secondItem="bcq-BT-1RK" secondAttribute="top" constant="7" id="1OQ-UI-bbj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nt3-cy-mZj" secondAttribute="trailing" constant="-20" id="4wt-WM-T1x"/>
+                            <constraint firstItem="BlI-9K-Kkc" firstAttribute="top" secondItem="nt3-cy-mZj" secondAttribute="bottom" id="8VE-gY-uvU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bcq-BT-1RK" secondAttribute="trailing" constant="-20" id="AlQ-Th-7SR"/>
+                            <constraint firstItem="bcq-BT-1RK" firstAttribute="leading" secondItem="jbw-e6-crL" secondAttribute="leadingMargin" constant="-20" id="Ay8-hd-nXN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XIH-Cy-hWw" secondAttribute="trailing" constant="-16" id="Qhe-Jl-wSL"/>
+                            <constraint firstItem="nt3-cy-mZj" firstAttribute="leading" secondItem="jbw-e6-crL" secondAttribute="leadingMargin" constant="-20" id="UQh-9t-mdM"/>
+                            <constraint firstItem="XIH-Cy-hWw" firstAttribute="leading" secondItem="jbw-e6-crL" secondAttribute="leadingMargin" constant="-16" id="ddq-yP-bVl"/>
+                            <constraint firstItem="nt3-cy-mZj" firstAttribute="top" secondItem="bcq-BT-1RK" secondAttribute="bottom" id="gTJ-1B-G9h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectBodyTextLabel" destination="kM4-zw-Ku1" id="LxX-DQ-hwc"/>
+                        <outlet property="dayLabel" destination="bcq-BT-1RK" id="Qo5-Fb-sx5"/>
+                        <outlet property="dayTitleLabel" destination="XIH-Cy-hWw" id="leo-YD-koi"/>
+                        <outlet property="epistleBodyTextLabel" destination="V9R-UB-eUQ" id="V5j-rj-7rb"/>
+                        <outlet property="epistleTitleLabel" destination="Y8W-a2-M7I" id="toS-8Y-buf"/>
+                        <outlet property="gospelBodyTextLabel" destination="3v9-Dp-hwb" id="qqp-ut-kgs"/>
+                        <outlet property="gospelTitleLabel" destination="goF-6c-q8L" id="EF6-tt-qhm"/>
+                        <outlet property="oldTestamentBodyTextLabel" destination="4YE-KR-W8p" id="Hqi-sl-EwS"/>
+                        <outlet property="oldTestamentTitleLabel" destination="Nbu-xE-eoE" id="pgB-ul-m23"/>
+                        <outlet property="psalmBodyTextLabel" destination="CN9-Ft-5Gd" id="5dQ-QE-uQP"/>
+                        <outlet property="psalmSubtitleLabel" destination="EzR-nO-yl8" id="RNR-6H-h7n"/>
+                        <outlet property="psalmTitleLabel" destination="5BI-xd-qYN" id="VZQ-xR-ddG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMR-LB-CUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779" y="724"/>
+        </scene>
+        <!--Initial Navigation Controller-->
+        <scene sceneID="FBp-jR-wsU">
+            <objects>
+                <navigationController title="Initial Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="E70-0n-8lq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6g4-Du-yRl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Ng2-be-W4u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOa-PP-Dem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-688" y="724"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="2048" height="2048"/>
+    </resources>
+</document>
