@@ -1,10 +1,4 @@
-//
-//  Date.swift
-//  Lent '17
-//
-//  Created by Paul Kirk Adams on 1/12/17.
-//  Copyright © 2017 Paul Kirk Adams. All rights reserved.
-//
+//  See LICENSE folder for this project’s licensing information.
 
 import Foundation
 
@@ -20,9 +14,9 @@ class Date: CustomStringConvertible, Equatable {
     }
     
     func isEqual(_ date: Date) -> ComparisonResult {
-        let selfComposite = (year * 10000) + (month * 100) + day
+        let selfComposite  = (year * 10000) + (month * 100) + day
         let otherComposite = (date.year * 10000) + (date.month * 100) + date.day
-        
+
         if selfComposite < otherComposite {
             return .orderedAscending
         } else if selfComposite == otherComposite {
@@ -33,16 +27,16 @@ class Date: CustomStringConvertible, Equatable {
     }
     
     init(day: Int, month: Int, year: Int) {
-        self.day = day
+        self.day   = day
         self.month = month
-        self.year = year
+        self.year  = year
     }
     
     init(date: Foundation.Date) {
-        let part = date.monthDayAndYearComponents        
-        self.day = part.day!
+        let part   = date.monthDayAndYearComponents
+        self.day   = part.day!
         self.month = part.month!
-        self.year = part.year!
+        self.year  = part.year!
     }
     
     var nsdate: Foundation.Date {

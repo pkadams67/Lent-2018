@@ -1,10 +1,4 @@
-//
-//  MonthCollectionCell.swift
-//  Lent '17
-//
-//  Created by Paul Kirk Adams on 1/12/17.
-//  Copyright © 2017 Paul Kirk Adams. All rights reserved.
-//
+//  See LICENSE folder for this project’s licensing information.
 
 import UIKit
 
@@ -17,12 +11,12 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
     @IBOutlet var collectionView: UICollectionView!
     weak var monthCellDelgate: MonthCollectionCellDelegate?
 
-    var dates = [Date]()
+    var dates                          = [Date]()
     var previousMonthVisibleDatesCount = 0
-    var currentMonthVisibleDatesCount = 0
-    var nextMonthVisibleDatesCount = 0
+    var currentMonthVisibleDatesCount  = 0
+    var nextMonthVisibleDatesCount     = 0
 
-    var adventDays: [Date]?
+    var lentDays: [Date]?
 
     var logic: CalendarLogic? {
         didSet {
@@ -43,15 +37,15 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
 
     func populateDates() {
         if logic != nil {
-            dates = [Date]()
-            //adventDays = []
-            dates += logic!.previousMonthVisibleDays!
-            dates += logic!.currentMonthDays!
-            dates += logic!.nextMonthVisibleDays!
+            dates                          = [Date]()
+            // lentDays = []
+            dates                          += logic!.previousMonthVisibleDays!
+            dates                          += logic!.currentMonthDays!
+            dates                          += logic!.nextMonthVisibleDays!
 
             previousMonthVisibleDatesCount = logic!.previousMonthVisibleDays!.count
-            currentMonthVisibleDatesCount = logic!.currentMonthDays!.count
-            nextMonthVisibleDatesCount = logic!.nextMonthVisibleDays!.count
+            currentMonthVisibleDatesCount  = logic!.currentMonthDays!.count
+            nextMonthVisibleDatesCount     = logic!.nextMonthVisibleDays!.count
 
         } else {
             dates.removeAll(keepingCapacity: false)
@@ -61,7 +55,7 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        let nib = UINib(nibName: "DayCollectionCell", bundle: nil)
+        let nib       = UINib(nibName: "DayCollectionCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "DayCollectionCell")
 
         let headerNib = UINib(nibName: "WeekHeaderView", bundle: nil)
@@ -79,15 +73,16 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
 
         let date = dates[indexPath.item]
 
-        // Advent Cells Coloring
-        if date.year == 2016 && date.month == 11 && date.day > 26 {
-            cell.backgroundColor = UIColor(red: 100/255, green: 15/255, blue: 125/255, alpha: 0.2)
-        } else if date.year == 2016 && date.month == 12 && date.day < 26 {
-                 cell.backgroundColor = UIColor(red: 100/255, green: 15/255, blue: 125/255, alpha: 0.2)
+        // Lent Cells Coloring
+        if date.year == 2017 && date.month == 3 && date.day > 0 {
+            cell.backgroundColor = UIColor(red: 0.941, green: 0.82, blue: 0.98, alpha: 1)
+        } else if date.year == 2017 && date.month == 4 && date.day < 16 {
+                 cell.backgroundColor = UIColor(red: 0.941, green: 0.82, blue: 0.98, alpha: 1)
+        } else if date.year == 2017 && date.month == 4 && date.day == 16 {
+                cell.backgroundColor = UIColor(red: 0.831, green: 0.686, blue: 0.216, alpha: 1) // Hex d4af37 #colorLiteral(red: 0.8660482764, green: 0.7336418033, blue: 0.274929136, alpha: 1)
         } else {
             cell.backgroundColor = UIColor.white
         }
-
         cell.date = (indexPath.item < dates.count) ? date : nil
         cell.mark = (selectedDate == date)
         cell.disabled = (indexPath.item < previousMonthVisibleDatesCount) ||
@@ -107,10 +102,10 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.frame.width - 0.1)/7.0, height: collectionView.frame.height/7.0)
+        return CGSize(width: (collectionView.frame.width - 0.1) / 7.0, height: collectionView.frame.height / 7.0)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height/7.0)
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height / 7.0)
     }
 }

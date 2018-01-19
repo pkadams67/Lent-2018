@@ -1,10 +1,4 @@
-//
-//  Lectionary.swift
-//  Lent '17
-//
-//  Created by Paul Kirk Adams on 1/12/17.
-//  Copyright © 2017 Paul Kirk Adams. All rights reserved.
-//
+//  See LICENSE folder for this project’s licensing information.
 
 import Foundation
 
@@ -38,17 +32,17 @@ class Lectionary {
         gospelBodyText: String
         )
     {
-        self.dayTitle = dayTitle
-        self.day = day
-        self.collectBodyText = collectBodyText
-        self.oldTestamentTitle = oldTestamentTitle
+        self.dayTitle             = dayTitle
+        self.day                  = day
+        self.collectBodyText      = collectBodyText
+        self.oldTestamentTitle    = oldTestamentTitle
         self.oldTestamentBodyText = oldTestamentBodyText
-        self.psalmTitle = psalmTitle
-        self.psalmSubtitle = psalmSubtitle
-        self.psalmBodyText = psalmBodyText
-        self.epistleTitle = epistleTitle
-        self.epistleBodyText = epistleBodyText
-        self.gospelTitle = gospelTitle
-        self.gospelBodyText = gospelBodyText
+        self.psalmTitle           = psalmTitle
+        self.psalmSubtitle        = psalmSubtitle
+        self.psalmBodyText        = psalmBodyText
+        self.epistleTitle         = epistleTitle
+        self.epistleBodyText      = epistleBodyText
+        self.gospelTitle          = gospelTitle
+        self.gospelBodyText       = gospelBodyText
     }
 }

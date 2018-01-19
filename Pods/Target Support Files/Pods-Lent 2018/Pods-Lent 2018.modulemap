@@ -1,0 +1,6 @@
+framework module Pods_Lent_2018 {
+  umbrella header "Pods-Lent 2018-umbrella.h"
+
+  export *
+  module * { export * }
+}

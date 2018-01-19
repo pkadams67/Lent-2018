@@ -1,10 +1,4 @@
-//
-//  DayCollectionCell.swift
-//  Lent '17
-//
-//  Created by Paul Kirk Adams on 1/12/17.
-//  Copyright © 2017 Paul Kirk Adams. All rights reserved.
-//
+//  See LICENSE folder for this project’s licensing information.
 
 import UIKit
 
