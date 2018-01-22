@@ -14,10 +14,10 @@
 		977721921E63902300F5611D /* SafariHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977721901E63902300F5611D /* SafariHandling.swift */; };
 		97A4E3EE1C5A78CC00890D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3ED1C5A78CC00890D89 /* AppDelegate.swift */; };
 		97A4E3F61C5A79AF00890D89 /* Lectionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3F51C5A79AF00890D89 /* Lectionary.swift */; };
-		97A4E3F81C5A79BA00890D89 /* LectionaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3F71C5A79BA00890D89 /* LectionaryController.swift */; };
+		97A4E3F81C5A79BA00890D89 /* LectionaryReadings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3F71C5A79BA00890D89 /* LectionaryReadings.swift */; };
 		97A4E3FA1C5A79C400890D89 /* LectionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3F91C5A79C400890D89 /* LectionaryViewController.swift */; };
 		97A4E3FC1C5A79D300890D89 /* CalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3FB1C5A79D300890D89 /* CalendarLogic.swift */; };
-		97A4E3FE1C5A79E000890D89 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3FD1C5A79E000890D89 /* NSDateExtension.swift */; };
+		97A4E3FE1C5A79E000890D89 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3FD1C5A79E000890D89 /* DateExtension.swift */; };
 		97A4E4001C5A79EE00890D89 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3FF1C5A79EE00890D89 /* CalendarView.swift */; };
 		97A4E4021C5A79F900890D89 /* CalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97A4E4011C5A79F900890D89 /* CalendarView.xib */; };
 		97A4E4041C5A7A0600890D89 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E4031C5A7A0600890D89 /* CalendarViewController.swift */; };
@@ -44,10 +44,10 @@
 		97A4E3EB1C5A78BC00890D89 /* Lent 2018-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Lent 2018-Info.plist"; sourceTree = "<group>"; };
 		97A4E3ED1C5A78CC00890D89 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97A4E3F51C5A79AF00890D89 /* Lectionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lectionary.swift; sourceTree = "<group>"; };
-		97A4E3F71C5A79BA00890D89 /* LectionaryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectionaryController.swift; sourceTree = "<group>"; };
+		97A4E3F71C5A79BA00890D89 /* LectionaryReadings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectionaryReadings.swift; sourceTree = "<group>"; };
 		97A4E3F91C5A79C400890D89 /* LectionaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LectionaryViewController.swift; sourceTree = "<group>"; };
 		97A4E3FB1C5A79D300890D89 /* CalendarLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarLogic.swift; sourceTree = "<group>"; };
-		97A4E3FD1C5A79E000890D89 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		97A4E3FD1C5A79E000890D89 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		97A4E3FF1C5A79EE00890D89 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		97A4E4011C5A79F900890D89 /* CalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarView.xib; sourceTree = "<group>"; };
 		97A4E4031C5A7A0600890D89 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				97A4E4031C5A7A0600890D89 /* CalendarViewController.swift */,
-				977721871E62FCA700F5611D /* InfoViewController.swift */,
 				97A4E3F91C5A79C400890D89 /* LectionaryViewController.swift */,
+				977721871E62FCA700F5611D /* InfoViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				97A4E3F51C5A79AF00890D89 /* Lectionary.swift */,
-				97A4E3F71C5A79BA00890D89 /* LectionaryController.swift */,
+				97A4E3F71C5A79BA00890D89 /* LectionaryReadings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,11 +155,11 @@
 				97A4E3ED1C5A78CC00890D89 /* AppDelegate.swift */,
 				97A4E3FB1C5A79D300890D89 /* CalendarLogic.swift */,
 				97A4E4051C5A7A1100890D89 /* Date.swift */,
+				97A4E3FD1C5A79E000890D89 /* DateExtension.swift */,
 				97A4E4071C5A7A1C00890D89 /* DayCollectionCell.swift */,
-				9777218F1E63902300F5611D /* ErrorHandling.swift */,
 				97A4E40F1C5A7A5700890D89 /* MonthCollectionCell.swift */,
-				97A4E3FD1C5A79E000890D89 /* NSDateExtension.swift */,
 				977721901E63902300F5611D /* SafariHandling.swift */,
+				9777218F1E63902300F5611D /* ErrorHandling.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,10 +326,10 @@
 				97A4E3EE1C5A78CC00890D89 /* AppDelegate.swift in Sources */,
 				97A4E3F61C5A79AF00890D89 /* Lectionary.swift in Sources */,
 				977721921E63902300F5611D /* SafariHandling.swift in Sources */,
-				97A4E3F81C5A79BA00890D89 /* LectionaryController.swift in Sources */,
+				97A4E3F81C5A79BA00890D89 /* LectionaryReadings.swift in Sources */,
 				97A4E3FA1C5A79C400890D89 /* LectionaryViewController.swift in Sources */,
 				97A4E3FC1C5A79D300890D89 /* CalendarLogic.swift in Sources */,
-				97A4E3FE1C5A79E000890D89 /* NSDateExtension.swift in Sources */,
+				97A4E3FE1C5A79E000890D89 /* DateExtension.swift in Sources */,
 				97A4E4001C5A79EE00890D89 /* CalendarView.swift in Sources */,
 				97A4E4041C5A7A0600890D89 /* CalendarViewController.swift in Sources */,
 				97A4E4061C5A7A1100890D89 /* Date.swift in Sources */,

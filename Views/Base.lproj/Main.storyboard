@@ -11,6 +11,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Initial Navigation Controller-->
+        <scene sceneID="FBp-jR-wsU">
+            <objects>
+                <navigationController title="Initial Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="E70-0n-8lq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6g4-Du-yRl">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Ng2-be-W4u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOa-PP-Dem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-688" y="724"/>
+        </scene>
         <!--Calendar-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -108,131 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="724"/>
-        </scene>
-        <!--About-->
-        <scene sceneID="RqS-QK-QgJ">
-            <objects>
-                <viewController title="About" id="9by-WW-LZl" customClass="InfoViewController" customModule="Lent_2018" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OcT-9Y-IQX"/>
-                        <viewControllerLayoutGuide type="bottom" id="0zu-32-37k"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="H49-oc-BsY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="B6l-Mg-R1I">
-                                <rect key="frame" x="24" y="101.66666666666669" width="328" height="609"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Lent 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-wk-mkT">
-                                        <rect key="frame" x="0.0" y="0.0" width="328" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="c6X-wV-aiW"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="42"/>
-                                        <color key="textColor" red="0.27843137254901962" green="0.039215686274509803" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="2" height="2"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="95D-8g-h3U">
-                                        <rect key="frame" x="0.0" y="60" width="328" height="235"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGz-Lh-vb7" userLabel="about">
-                                                <rect key="frame" x="0.0" y="0.0" width="328" height="166"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="166.5" id="zFb-fs-lLO"/>
-                                                </constraints>
-                                                <string key="text">With 47 daily office readings from the Revised Common Lectionary (RCL), this lifestyle app helps Christians prepare spiritually during the solemn six-week liturgical season preceding the celebration of our Lord’s resurrection. It offers an interactive calendar and counts down the days until Easter.</string>
-                                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
-                                                <color key="textColor" red="0.14117647058823529" green="0.019607843137254902" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <size key="shadowOffset" width="1" height="1"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Paul Adams is a Nashville-based developer who’s crafted over 100 iOS apps. Let him help build your next pixel-perfect project!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xmz-UN-09d" userLabel="developerBio">
-                                                <rect key="frame" x="0.0" y="172.00000000000003" width="328" height="63"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="63" id="LTE-Un-03P"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
-                                                <color key="textColor" red="0.14117647058823529" green="0.019607843137254902" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <size key="shadowOffset" width="1" height="1"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7PH-hQ-ENh">
-                                        <rect key="frame" x="0.0" y="307" width="328" height="160"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EI5-QJ-5fs" userLabel="shareButton">
-                                                <rect key="frame" x="0.0" y="65" width="158" height="30"/>
-                                                <color key="backgroundColor" red="0.27843137254901962" green="0.039215686274509803" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="MaS-jk-dA4"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                <size key="titleShadowOffset" width="1" height="1"/>
-                                                <state key="normal" title="Share">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="shareAppButtonTapped:" destination="9by-WW-LZl" eventType="touchUpInside" id="rcy-pd-9Or"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-ao-yV2" userLabel="devURLButton">
-                                                <rect key="frame" x="170" y="65" width="158" height="30"/>
-                                                <color key="backgroundColor" red="0.27843137254901962" green="0.039215686274509803" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="hrq-gQ-bgE"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                <size key="titleShadowOffset" width="1" height="1"/>
-                                                <state key="normal" title="Developer Website">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="developerURLButtonTapped:" destination="9by-WW-LZl" eventType="touchUpInside" id="8Bb-Hn-ZKI"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2Q-l1-dlj" userLabel="copyright">
-                                        <rect key="frame" x="0.0" y="479" width="328" height="130"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="130" id="Zsd-l1-dRC"/>
-                                        </constraints>
-                                        <string key="text">The Bible texts of the Old Testament, Epistle, and Gospel lessons are from the New Revised Standard Version Bible, copyright 1989 by the Division of Christian Education of the National Council of the Church of Christ in the USA, and used by permission. The Collects, Psalms, and Canticles are from the Book of Common Prayer, 1979.</string>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                        <color key="textColor" red="0.14117647058823529" green="0.019607843137254902" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="1" height="1"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="B6l-Mg-R1I" firstAttribute="centerY" secondItem="H49-oc-BsY" secondAttribute="centerY" id="Du6-dY-uCl"/>
-                            <constraint firstItem="B6l-Mg-R1I" firstAttribute="width" secondItem="H49-oc-BsY" secondAttribute="width" multiplier="7/8" id="Sbr-pu-RZK"/>
-                            <constraint firstItem="B6l-Mg-R1I" firstAttribute="height" secondItem="H49-oc-BsY" secondAttribute="height" multiplier="3/4" id="ZeZ-XQ-b97"/>
-                            <constraint firstItem="B6l-Mg-R1I" firstAttribute="centerX" secondItem="H49-oc-BsY" secondAttribute="centerX" id="end-p9-MdT"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="About" id="l4v-7l-kGz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rNX-rP-MfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="446" y="1467"/>
+            <point key="canvasLocation" x="-209" y="724"/>
         </scene>
         <!--Lectionary-->
         <scene sceneID="abo-6a-61E">
@@ -370,7 +267,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XIH-Cy-hWw" firstAttribute="top" secondItem="p4N-YH-0j4" secondAttribute="bottom" id="01d-MW-mwC"/>
                             <constraint firstItem="XIH-Cy-hWw" firstAttribute="bottom" secondItem="bcq-BT-1RK" secondAttribute="top" constant="7" id="1OQ-UI-bbj"/>
@@ -401,28 +298,109 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMR-LB-CUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-350" y="1467"/>
+            <point key="canvasLocation" x="281" y="724"/>
         </scene>
-        <!--Initial Navigation Controller-->
-        <scene sceneID="FBp-jR-wsU">
+        <!--About-->
+        <scene sceneID="RqS-QK-QgJ">
             <objects>
-                <navigationController title="Initial Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="E70-0n-8lq" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6g4-Du-yRl">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Ng2-be-W4u"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zOa-PP-Dem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="About" id="9by-WW-LZl" customClass="InfoViewController" customModule="Lent_2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OcT-9Y-IQX"/>
+                        <viewControllerLayoutGuide type="bottom" id="0zu-32-37k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H49-oc-BsY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="95D-8g-h3U">
+                                <rect key="frame" x="23.333333333333343" y="101.66666666666669" width="328.33333333333326" height="609"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Lent 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-wk-mkT">
+                                        <rect key="frame" x="0.0" y="0.0" width="328.33333333333331" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="42"/>
+                                        <color key="textColor" red="0.27843137254901962" green="0.039215686274509803" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGz-Lh-vb7" userLabel="about">
+                                        <rect key="frame" x="0.0" y="66.999999999999986" width="328.33333333333331" height="162.33333333333331"/>
+                                        <string key="text">With 47 daily office readings from the Revised Common Lectionary (RCL), this lifestyle app helps Christians spiritually prepare during the solemn six-week liturgical season preceding the celebration of our Lord’s resurrection. It offers an interactive calendar and counts down the days until Easter.</string>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <color key="textColor" red="0.14117647058823529" green="0.019607843137254902" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EI5-QJ-5fs" userLabel="shareButton">
+                                        <rect key="frame" x="0.0" y="241.33333333333331" width="328.33333333333331" height="44"/>
+                                        <color key="backgroundColor" red="0.27843137254901962" green="0.039215686274509803" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="MaS-jk-dA4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Share">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="shareAppButtonTapped:" destination="9by-WW-LZl" eventType="touchUpInside" id="rcy-pd-9Or"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2Q-l1-dlj" userLabel="copyright">
+                                        <rect key="frame" x="0.0" y="297.33333333333331" width="328.33333333333331" height="182.66666666666669"/>
+                                        <string key="text">The Bible texts of the Old Testament, Epistle, and Gospel lessons are from the New Revised Standard Version Bible, copyright 1989 by the Division of Christian Education of the National Council of the Church of Christ in the USA, and used by permission. The Collects, Psalms, and Canticles are from the Book of Common Prayer, 1979.</string>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <color key="textColor" red="0.14117647058823529" green="0.019607843137254902" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-ao-yV2" userLabel="devURLButton">
+                                        <rect key="frame" x="0.0" y="492" width="328.33333333333331" height="44"/>
+                                        <color key="backgroundColor" red="0.27843137254901962" green="0.039215686274509803" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="hrq-gQ-bgE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Developer Website">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="developerURLButtonTapped:" destination="9by-WW-LZl" eventType="touchUpInside" id="8Bb-Hn-ZKI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Paul Adams is a Nashville-based developer who’s published over 100 iOS titles. Let him help craft your next awesome project!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xmz-UN-09d" userLabel="developerBio">
+                                        <rect key="frame" x="0.0" y="548" width="328.33333333333331" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <color key="textColor" red="0.14117647058823529" green="0.019607843137254902" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="95D-8g-h3U" firstAttribute="centerX" secondItem="H49-oc-BsY" secondAttribute="centerX" id="8Hc-Xt-D27"/>
+                            <constraint firstItem="95D-8g-h3U" firstAttribute="centerY" secondItem="H49-oc-BsY" secondAttribute="centerY" id="Np6-JK-4H5"/>
+                            <constraint firstItem="95D-8g-h3U" firstAttribute="height" secondItem="H49-oc-BsY" secondAttribute="height" multiplier="3/4" id="RhD-ua-RdE"/>
+                            <constraint firstItem="95D-8g-h3U" firstAttribute="width" secondItem="H49-oc-BsY" secondAttribute="width" multiplier="7/8" id="Ugx-WR-8lJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l4v-7l-kGz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rNX-rP-MfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="724"/>
+            <point key="canvasLocation" x="-210" y="1701"/>
         </scene>
     </scenes>
     <resources>

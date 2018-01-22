@@ -2,7 +2,7 @@
 
 import Foundation
 
-class LectionaryController {
+class LectionaryReadings {
     
     static var readings: [Lectionary] {
         

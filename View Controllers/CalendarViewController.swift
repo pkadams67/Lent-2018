@@ -80,10 +80,10 @@ class CalendarViewController: UIViewController, CalendarViewDelegate {
                     _        = detailViewController.view
                     let date = selectedDate as! Foundation.Date
                     if date.year == 2018 && date.month == 2 && date.day > 13 {
-                        let reading = LectionaryController.readings[date.day - 1]
+                        let reading = LectionaryReadings.readings[date.day - 1]
                         detailViewController.updateWithReading(reading)
                     } else if date.year == 2018 && date.month == 4 && date.day < 2 {
-                        let reading = LectionaryController.readings[date.day + 30]
+                        let reading = LectionaryReadings.readings[date.day + 30]
                         detailViewController.updateWithReading(reading)
                     }
                 }

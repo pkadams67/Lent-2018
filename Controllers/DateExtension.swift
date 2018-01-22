@@ -20,12 +20,12 @@ extension Foundation.Date {
         return Calendar.current.date(from: components)!
     }
     
-    var firstDayOfTheMonth: Date {
-        var date: Date
+    var firstDayOfTheMonth: Foundation.Date {
+        var date: Date?
         var startOfMonth: Date
         var lengthOfMonth: TimeInterval = 0
         Calendar.current.dateInterval(of: .month, start: startOfMonth, interval: &lengthOfMonth, for: self)
-        return date
+        return date!
     }
     
     var firstDayOfPreviousMonth: Foundation.Date {

@@ -3,7 +3,7 @@
 import Foundation
 
 class Lectionary {
-
+    
     let dayTitle: String
     let day: String
     let collectBodyText: String
@@ -16,7 +16,7 @@ class Lectionary {
     let epistleBodyText: String
     let gospelTitle: String
     let gospelBodyText: String
-
+    
     init(
         dayTitle: String,
         day: String,
@@ -30,8 +30,7 @@ class Lectionary {
         epistleBodyText: String,
         gospelTitle: String,
         gospelBodyText: String
-        )
-    {
+        ) {
         self.dayTitle             = dayTitle
         self.day                  = day
         self.collectBodyText      = collectBodyText
