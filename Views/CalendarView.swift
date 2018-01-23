@@ -6,6 +6,19 @@ let kMonthRange = 12
 
 class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, MonthCollectionCellDelegate {
     
+    @IBOutlet var monthYearLabel: UILabel!
+    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var previousButton: UIButton!
+    
+    @IBAction func retreatToPreviousMonth(_ button: UIButton) {
+        advance(-1, animate: true)
+    }
+    
+    @IBAction func advanceToFollowingMonth(_ button: UIButton) {
+        advance(1, animate: true)
+    }
+    
     weak var delegate: CalendarViewDelegate?
     fileprivate var collectionData = [CalendarLogic]()
     
@@ -42,19 +55,6 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         }
     }
     
-    @IBOutlet var monthYearLabel: UILabel!
-    @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var nextButton: UIButton!
-    @IBOutlet var previousButton: UIButton!
-    
-    @IBAction func retreatToPreviousMonth(_ button: UIButton) {
-        advance(-1, animate: true)
-    }
-    
-    @IBAction func advanceToFollowingMonth(_ button: UIButton) {
-        advance(1, animate: true)
-    }
-    
     override func awakeFromNib() {
         let nib = UINib(nibName: "MonthCollectionCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "MonthCollectionCell")
@@ -75,11 +75,11 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell              = collectionView.dequeueReusableCell(withReuseIdentifier: "MonthCollectionCell", for: indexPath) as! MonthCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MonthCollectionCell", for: indexPath) as! MonthCollectionCell
         cell.monthCellDelgate = self
-        cell.logic            = collectionData[indexPath.item]
+        cell.logic = collectionData[indexPath.item]
         if cell.logic!.isVisible(selectedDate!) {
-            cell.selectedDate     = Date(date: selectedDate!)
+            cell.selectedDate = Date(date: selectedDate!)
         }
         return cell
     }

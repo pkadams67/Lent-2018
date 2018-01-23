@@ -11,10 +11,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        UINavigationBar.appearance().barTintColor        = UIColor(red: 0.141, green: 0.0196, blue: 0.18, alpha: 1) // Hex #24052E
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.141, green: 0.0196, blue: 0.18, alpha: 1)// Hex #24052E
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        UIBarButtonItem.appearance().tintColor           = UIColor(red: 0.141, green: 0.0196, blue: 0.18, alpha: 1) // Hex #24052E
-        UINavigationBar.appearance().tintColor           = UIColor.white
+        UIBarButtonItem.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().tintColor = UIColor.white
         Fabric.sharedSDK().debug = true
         Fabric.with([Crashlytics.self])
         // TODO: Move this to where you establish a user session

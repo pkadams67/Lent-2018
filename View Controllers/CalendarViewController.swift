@@ -5,9 +5,6 @@ import Crashlytics
 
 class CalendarViewController: UIViewController, CalendarViewDelegate {
     
-    var firstRun: Bool = true
-    var easterDay      = Foundation.Date()
-    
     @IBOutlet var placeholderView: UIView!
     @IBOutlet weak var countdownLabel: UILabel!
     
@@ -15,18 +12,21 @@ class CalendarViewController: UIViewController, CalendarViewDelegate {
     //        Crashlytics.sharedInstance().crash()
     //    }
     
+    var firstRun: Bool = true
+    var easterDay = Foundation.Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Answers.logCustomEvent(withName: "Viewed Calendar", customAttributes: nil)
-        let date                                               = Foundation.Date()
-        let calendarView                                       = CalendarView.instance(date, selectedDate: date)
-        calendarView.delegate                                  = self
+        let date = Foundation.Date()
+        let calendarView = CalendarView.instance(date, selectedDate: date)
+        calendarView.delegate = self
         calendarView.translatesAutoresizingMaskIntoConstraints = false
         placeholderView.addSubview(calendarView)
         placeholderView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[calendarView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["calendarView": calendarView]))
         placeholderView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[calendarView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["calendarView": calendarView]))
-        let currentYear: Int                                   = (Calendar.current as NSCalendar).components(.year, from: Foundation.Date()).year!
-        easterDay                                              = Foundation.Date.date(1, month: 4, year: currentYear)
+        let currentYear: Int = (Calendar.current as NSCalendar).components(.year, from: Foundation.Date()).year!
+        easterDay = Foundation.Date.date(1, month: 4, year: currentYear)
         // Force a Crash (disable for release)
         //        let button = UIButton(type: UIButtonType.RoundedRect)
         //        button.frame = CGRectMake(20, 50, 100, 30)
@@ -41,7 +41,7 @@ class CalendarViewController: UIViewController, CalendarViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
-        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(CalendarViewController.updateCountdown), userInfo: nil, repeats: true)
+        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(CalendarViewController.updateCountdown), userInfo: nil, repeats: true)
         timer.fire()
     }
     
@@ -68,6 +68,8 @@ class CalendarViewController: UIViewController, CalendarViewDelegate {
         }
         if date.year == 2018 && date.month == 2 && date.day > 13 {
             performSegue(withIdentifier: "calendarToLectionary", sender: date)
+        } else if date.year == 2018 && date.month == 3 && date.day < 32 {
+            performSegue(withIdentifier: "calendarToLectionary", sender: date)
         } else if date.year == 2018 && date.month == 4 && date.day < 2 {
             performSegue(withIdentifier: "calendarToLectionary", sender: date)
         }
@@ -80,10 +82,13 @@ class CalendarViewController: UIViewController, CalendarViewDelegate {
                     _        = detailViewController.view
                     let date = selectedDate as! Foundation.Date
                     if date.year == 2018 && date.month == 2 && date.day > 13 {
-                        let reading = LectionaryReadings.readings[date.day - 1]
+                        let reading = LectionaryReadings.readings[date.day - 14]
+                        detailViewController.updateWithReading(reading)
+                    } else if date.year == 2018 && date.month == 3 && date.day < 32 {
+                        let reading = LectionaryReadings.readings[date.day + 14]
                         detailViewController.updateWithReading(reading)
                     } else if date.year == 2018 && date.month == 4 && date.day < 2 {
-                        let reading = LectionaryReadings.readings[date.day + 30]
+                        let reading = LectionaryReadings.readings[date.day + 45]
                         detailViewController.updateWithReading(reading)
                     }
                 }

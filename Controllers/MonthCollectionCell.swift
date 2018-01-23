@@ -55,7 +55,7 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        let nib       = UINib(nibName: "DayCollectionCell", bundle: nil)
+        let nib = UINib(nibName: "DayCollectionCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "DayCollectionCell")
 
         let headerNib = UINib(nibName: "WeekHeaderView", bundle: nil)
@@ -63,8 +63,7 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // 7*6 = 42 :- 7 columns (7 days in a week) and 6 rows (max 6 weeks in a month)
-        return dates.count//42
+        return dates.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,13 +72,13 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
 
         let date = dates[indexPath.item]
 
-        // Lent Cells Coloring
-        if date.year == 2017 && date.month == 3 && date.day > 0 {
+        // Lent Cells Shading
+        if date.year == 2018 && date.month == 2 && date.day > 13 {
             cell.backgroundColor = UIColor(red: 0.941, green: 0.82, blue: 0.98, alpha: 1)
-        } else if date.year == 2017 && date.month == 4 && date.day < 16 {
+        } else if date.year == 2018 && date.month == 3 && date.day > 0 {
                  cell.backgroundColor = UIColor(red: 0.941, green: 0.82, blue: 0.98, alpha: 1)
-        } else if date.year == 2017 && date.month == 4 && date.day == 16 {
-                cell.backgroundColor = UIColor(red: 0.831, green: 0.686, blue: 0.216, alpha: 1) // Hex d4af37 #colorLiteral(red: 0.8660482764, green: 0.7336418033, blue: 0.274929136, alpha: 1)
+        } else if date.year == 2018 && date.month == 4 && date.day == 1 {
+                cell.backgroundColor = UIColor(red: 0.831, green: 0.686, blue: 0.216, alpha: 1) // Hex d4af37
         } else {
             cell.backgroundColor = UIColor.white
         }
