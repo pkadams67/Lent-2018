@@ -79,7 +79,7 @@ class CalendarViewController: UIViewController, CalendarViewDelegate {
         if segue.identifier == "calendarToLectionary" {
             if let selectedDate = sender {
                 if let detailViewController = segue.destination as? LectionaryViewController {
-                    _        = detailViewController.view
+                    _ = detailViewController.view
                     let date = selectedDate as! Foundation.Date
                     if date.year == 2018 && date.month == 2 && date.day > 13 {
                         let reading = LectionaryReadings.readings[date.day - 14]

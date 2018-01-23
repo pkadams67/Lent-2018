@@ -15,8 +15,8 @@ class InfoViewController: UIViewController {
         print("Share App Button Pushed")
         let textToShare    = "“Lent 2018” is awesome! Download it on the App Store:"
         if let appStoreURL = URL(string: "https://itunes.apple.com/us/app/lent-2018/id1278677389") {
-            let objectsToShare                                   = [textToShare, appStoreURL] as [Any]
-            let activityVC                                       = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            let objectsToShare = [textToShare, appStoreURL] as [Any]
+            let activityVC     = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = (sender as! UIView)
             self.present(activityVC, animated: true, completion: nil)
         }

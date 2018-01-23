@@ -4,7 +4,7 @@ import UIKit
 
 struct ErrorHandling {
     
-    static let ErrorOKButton       = "Got It!"
+    static let ErrorOKButton       = "Got it!"
     static let ErrorDefaultMessage = "Please try again"
     
     static func defaultErrorHandler(_ error: NSError?, title: String) {

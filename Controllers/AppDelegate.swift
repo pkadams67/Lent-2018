@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        UINavigationBar.appearance().barTintColor = UIColor(red: 0.141, green: 0.0196, blue: 0.18, alpha: 1)// Hex #24052E
+        UINavigationBar.appearance().barTintColor = UIColor(named: "PANTONE 18-3838 Ultra Violet")
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UIBarButtonItem.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().tintColor = UIColor.white
