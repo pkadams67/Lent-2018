@@ -12,7 +12,7 @@ class WeekHeaderView: UICollectionReusableView {
         if labels.count == formatter.weekdaySymbols.count {
             for i in 0 ..< formatter.weekdaySymbols.count {
                 let weekDayString = formatter.weekdaySymbols[i]
-                labels[i].text    = weekDayString.substring(to: weekDayString.characters.index(weekDayString.startIndex, offsetBy: 3))
+                labels[i].text    = String(weekDayString[..<weekDayString.index(weekDayString.startIndex, offsetBy: 3)])
             }
         }
     }

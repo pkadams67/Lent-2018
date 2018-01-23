@@ -64,7 +64,7 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 7*6 = 42 :- 7 columns (7 days in a week) and 6 rows (max 6 weeks in a month)
-        return 42
+        return dates.count//42
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

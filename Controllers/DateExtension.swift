@@ -21,11 +21,9 @@ extension Foundation.Date {
     }
     
     var firstDayOfTheMonth: Foundation.Date {
-        var date: Date?
-        var startOfMonth: Date
-        var lengthOfMonth: TimeInterval = 0
-        Calendar.current.dateInterval(of: .month, start: startOfMonth, interval: &lengthOfMonth, for: self)
-        return date!
+        var components = Calendar.current.dateComponents([.year, .month, .day], from: Calendar.current.startOfDay(for: self))
+        components.day = 1
+        return Calendar.current.date(from: components)!
     }
     
     var firstDayOfPreviousMonth: Foundation.Date {
@@ -83,7 +81,7 @@ extension Foundation.Date {
         var dateComponent   = DateComponents()
         dateComponent.month = followingMonth ? 1 : -1
         let date            = (Calendar.current as NSCalendar).date(byAdding: dateComponent, to: self, options: NSCalendar.Options(rawValue: 0))
-        return date!.firstDayOfTheMonth as Date
+        return date!.firstDayOfTheMonth
     }
     
     static func date(_ day: Int, month: Int, year: Int) -> Foundation.Date {

@@ -26,7 +26,7 @@ class CalendarLogic: Hashable {
     var nextMonthVisibleDays: [Date]?
     
     init(date: Foundation.Date) {
-        baseDate = date.firstDayOfTheMonth as Date
+        baseDate = date.firstDayOfTheMonth
         calculateVisibleDays()
     }
     
