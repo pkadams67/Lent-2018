@@ -8,6 +8,18 @@ end
 
 lane :Lent2018 do
 
+	match(type: "appstore",
+		app_identifier: "io.pkadams67.lent2018",
+		git_url: "https://github.com/pkadams67/lent2018certificaterepo")	
+
+	pem(development: false, 
+		app_identifier: "io.pkadams67.lent2018",
+		pem_name: "io.pkadams67.lent2018_push_production",
+		generate_p12: true, 
+		p12_password: "JDKExmK", 
+		force: false,
+		save_private_key: true)
+
   gym(scheme: "Lent 2018")
 
   deliver(skip_binary_upload: false,
