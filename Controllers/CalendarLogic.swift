@@ -92,7 +92,7 @@ class CalendarLogic: Hashable {
         let numberOfDaysInMonth = date.numberOfDaysInMonth
         let numberOfVisibleDays = numberOfDaysInPreviousPartialWeek
         let parts               = date.monthDayAndYearComponents
-        if (numberOfDaysInMonth - (numberOfVisibleDays - 1)) < numberOfDaysInMonth {
+        if (numberOfDaysInMonth - (numberOfVisibleDays - 1)) <= numberOfDaysInMonth {
             for i in (numberOfDaysInMonth - (numberOfVisibleDays - 1)) ... numberOfDaysInMonth {
                 dates.append(Date(day: i, month: parts.month!, year: parts.year!))
             }
