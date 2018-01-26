@@ -5,9 +5,14 @@ import Crashlytics
 
 class InfoViewController: UIViewController {
     
+    @IBOutlet weak var versionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Answers.logCustomEvent(withName: "Viewed About", customAttributes: nil)
+        let appBuildString   = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
+        let appVersionString = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+        versionLabel.text    = "Version \(appVersionString ?? "1.0") (Build \(appBuildString ?? "1"))"
     }
     
     @IBAction func shareAppButtonTapped(_ sender: AnyObject) {
