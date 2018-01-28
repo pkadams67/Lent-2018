@@ -3,7 +3,7 @@ username "paul.k.adams@me.com"
 app_version "2018"
 submit_for_review false
 automatic_release true
-price_tier 0
+price_tier 5
 force true
 
 submission_information({
