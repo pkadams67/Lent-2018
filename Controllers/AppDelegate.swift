@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-        if launchedBefore  {
+        if launchedBefore {
             self.window                     = UIWindow(frame: UIScreen.main.bounds)
             let storyboard                  = UIStoryboard(name: "Main", bundle: nil)
             let initialViewController       = storyboard.instantiateViewController(withIdentifier: "NavigationControllerScene")

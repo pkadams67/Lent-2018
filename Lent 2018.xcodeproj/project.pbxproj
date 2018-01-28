@@ -12,7 +12,6 @@
 		97726DB1201D2E5B00E5066E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97726DB0201D2E5B00E5066E /* OnboardingViewController.swift */; };
 		977721881E62FCA700F5611D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977721871E62FCA700F5611D /* InfoViewController.swift */; };
 		977721911E63902300F5611D /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9777218F1E63902300F5611D /* ErrorHandling.swift */; };
-		977721921E63902300F5611D /* SafariHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977721901E63902300F5611D /* SafariHandling.swift */; };
 		97A4E3EE1C5A78CC00890D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3ED1C5A78CC00890D89 /* AppDelegate.swift */; };
 		97A4E3F61C5A79AF00890D89 /* Lectionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3F51C5A79AF00890D89 /* Lectionary.swift */; };
 		97A4E3F81C5A79BA00890D89 /* LectionaryReadings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3F71C5A79BA00890D89 /* LectionaryReadings.swift */; };
@@ -42,7 +41,6 @@
 		97726DB0201D2E5B00E5066E /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		977721871E62FCA700F5611D /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		9777218F1E63902300F5611D /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
-		977721901E63902300F5611D /* SafariHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariHandling.swift; sourceTree = "<group>"; };
 		977B87B21BF721A800CDE6C6 /* Lent 2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lent 2018.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A4E3EB1C5A78BC00890D89 /* Lent 2018-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Lent 2018-Info.plist"; sourceTree = "<group>"; };
 		97A4E3ED1C5A78CC00890D89 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 				97A4E3FD1C5A79E000890D89 /* DateExtension.swift */,
 				97A4E4071C5A7A1C00890D89 /* DayCollectionCell.swift */,
 				97A4E40F1C5A7A5700890D89 /* MonthCollectionCell.swift */,
-				977721901E63902300F5611D /* SafariHandling.swift */,
 				9777218F1E63902300F5611D /* ErrorHandling.swift */,
 			);
 			path = Controllers;
@@ -334,7 +331,6 @@
 			files = (
 				97A4E3EE1C5A78CC00890D89 /* AppDelegate.swift in Sources */,
 				97A4E3F61C5A79AF00890D89 /* Lectionary.swift in Sources */,
-				977721921E63902300F5611D /* SafariHandling.swift in Sources */,
 				97A4E3F81C5A79BA00890D89 /* LectionaryReadings.swift in Sources */,
 				97A4E3FA1C5A79C400890D89 /* LectionaryViewController.swift in Sources */,
 				97A4E3FC1C5A79D300890D89 /* CalendarLogic.swift in Sources */,

@@ -1,6 +1,7 @@
 //  See LICENSE folder for this project’s licensing information.
 
 import UIKit
+import SafariServices
 import Crashlytics
 
 class InfoViewController: UIViewController {
@@ -12,7 +13,7 @@ class InfoViewController: UIViewController {
         Answers.logCustomEvent(withName: "Viewed About", customAttributes: nil)
         let appBuildString   = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
         let appVersionString = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
-        versionLabel.text    = "Version \(appVersionString ?? "1.0") (Build \(appBuildString ?? "1"))"
+        versionLabel.text    = "Version \(appVersionString ?? "2018") (Build \(appBuildString ?? "1"))"
     }
     
     @IBAction func shareAppButtonTapped(_ sender: AnyObject) {
@@ -27,10 +28,11 @@ class InfoViewController: UIViewController {
         }
     }
     
-    @IBAction func developerURLButtonTapped(_ sender: AnyObject) {
-        Answers.logCustomEvent(withName: "Visited Developer Website", customAttributes: nil)
-        print("Developer URL Button Tapped")
-        SafariHandling.presentSafariVC(URL(string: "http://www.pkadams67.io")!)
+    @IBAction func developerURLButtonTapped(_ sender: Any) {
+        print("\nDeveloper Website button tapped.\n")
+        Answers.logCustomEvent(withName: "Developer Website button tapped", customAttributes: nil)
+        let svc = SFSafariViewController(url: NSURL(string: "http://www.pkadams67.io")! as URL)
+        self.present(svc, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
