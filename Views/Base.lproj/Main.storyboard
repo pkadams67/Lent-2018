@@ -12,10 +12,65 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Initial Navigation Controller-->
+        <!--Onboarding View Controller-->
+        <scene sceneID="0YK-r1-uBu">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingScene" id="Hdl-BS-Eey" customClass="OnboardingViewController" customModule="Lent_2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pAp-7d-AF1"/>
+                        <viewControllerLayoutGuide type="bottom" id="jWw-yl-eVc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Csw-qu-jvz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc1-rH-tgC" customClass="OnboardingView" customModule="OnboardingKit">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-E2-8pP" userLabel="Begin Button">
+                                <rect key="frame" x="47.333333333333343" y="654" width="281" height="44"/>
+                                <color key="backgroundColor" red="0.23921568627450979" green="0.18823529411764706" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="yfn-mQ-ysd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="E70-0n-8lq" kind="show" id="sQd-13-lK5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="nc1-rH-tgC" firstAttribute="height" secondItem="Csw-qu-jvz" secondAttribute="height" id="Eoe-uC-zcZ"/>
+                            <constraint firstItem="jWw-yl-eVc" firstAttribute="top" secondItem="Kcw-E2-8pP" secondAttribute="bottom" constant="80" id="REZ-h1-Agc"/>
+                            <constraint firstItem="Kcw-E2-8pP" firstAttribute="width" secondItem="Csw-qu-jvz" secondAttribute="width" multiplier="3/4" id="bpS-gn-3WD"/>
+                            <constraint firstItem="nc1-rH-tgC" firstAttribute="centerX" secondItem="Csw-qu-jvz" secondAttribute="centerX" id="lhz-UZ-MTP"/>
+                            <constraint firstItem="nc1-rH-tgC" firstAttribute="centerY" secondItem="Csw-qu-jvz" secondAttribute="centerY" id="uOJ-L5-JH7"/>
+                            <constraint firstItem="Kcw-E2-8pP" firstAttribute="centerX" secondItem="Csw-qu-jvz" secondAttribute="centerX" id="usi-QO-iXV"/>
+                            <constraint firstItem="nc1-rH-tgC" firstAttribute="width" secondItem="Csw-qu-jvz" secondAttribute="width" id="wxb-sr-dNf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beginButton" destination="Kcw-E2-8pP" id="EhO-LV-exO"/>
+                        <outlet property="onboardingView" destination="nc1-rH-tgC" id="4Tq-8s-g3O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUs-cm-wzJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1454" y="723"/>
+        </scene>
+        <!--NavigationControllerScene-->
         <scene sceneID="FBp-jR-wsU">
             <objects>
-                <navigationController title="Initial Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="E70-0n-8lq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationControllerScene" title="NavigationControllerScene" automaticallyAdjustsScrollViewInsets="NO" id="E70-0n-8lq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6g4-Du-yRl">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>

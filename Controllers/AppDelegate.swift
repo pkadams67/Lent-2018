@@ -17,8 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         Fabric.sharedSDK().debug = true
         Fabric.with([Crashlytics.self])
+        
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            self.window                     = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard                  = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController       = storyboard.instantiateViewController(withIdentifier: "NavigationControllerScene")
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        } else {
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            self.window                     = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard                  = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController       = storyboard.instantiateViewController(withIdentifier: "OnboardingScene")
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
         // TODO: Move this to where you establish a user session
-        // self.logUser()
+         self.logUser()
         return true
     }
     
