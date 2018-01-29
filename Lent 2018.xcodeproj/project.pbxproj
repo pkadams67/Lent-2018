@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97160D7C201F851C00D09CCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97160D7B201F851C00D09CCB /* GoogleService-Info.plist */; };
 		9726384A1DDB8AB700084C70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972638461DDB8AB700084C70 /* LaunchScreen.storyboard */; };
 		9726384B1DDB8AB700084C70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 972638481DDB8AB700084C70 /* Main.storyboard */; };
 		97726DB1201D2E5B00E5066E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97726DB0201D2E5B00E5066E /* OnboardingViewController.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		81483E3EA15B7B931FE29F66 /* Pods_Lent_2018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lent_2018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97160D7B201F851C00D09CCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		972638471DDB8AB700084C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		972638491DDB8AB700084C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		974622381F5B64E700C6F37C /* Lent 2018.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Lent 2018.entitlements"; sourceTree = "<group>"; };
@@ -77,12 +79,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97396303201FB4DA0036E8DE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				97D7362A1DDE47BA001FC5FE /* Controllers */,
+				97D736291DDE4791001FC5FE /* Models */,
+				97D736281DDE4755001FC5FE /* View Controllers */,
+				97D736271DDE4719001FC5FE /* Views */,
+			);
+			name = Application;
+			path = Application;
+			sourceTree = "<group>";
+		};
 		974622391F5B652A00C6F37C /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				974622381F5B64E700C6F37C /* Lent 2018.entitlements */,
+				97160D7B201F851C00D09CCB /* GoogleService-Info.plist */,
 				97A4E4131C5A7A9100890D89 /* Lent 2018-Assets.xcassets */,
 				97A4E3EB1C5A78BC00890D89 /* Lent 2018-Info.plist */,
+				974622381F5B64E700C6F37C /* Lent 2018.entitlements */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -90,14 +105,11 @@
 		977B87A91BF721A800CDE6C6 = {
 			isa = PBXGroup;
 			children = (
-				97D736291DDE4791001FC5FE /* Models */,
-				97D736271DDE4719001FC5FE /* Views */,
-				97D736281DDE4755001FC5FE /* View Controllers */,
-				97D7362A1DDE47BA001FC5FE /* Controllers */,
-				974622391F5B652A00C6F37C /* Support */,
+				97396303201FB4DA0036E8DE /* Application */,
 				97C3C7F51DDE511D0034C808 /* Frameworks */,
-				977B87B31BF721A800CDE6C6 /* Products */,
 				AE410F33BF48A6D37FB3148E /* Pods */,
+				977B87B31BF721A800CDE6C6 /* Products */,
+				974622391F5B652A00C6F37C /* Support */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,13 +133,13 @@
 			isa = PBXGroup;
 			children = (
 				97A4E3FF1C5A79EE00890D89 /* CalendarView.swift */,
-				97A4E40B1C5A7A3D00890D89 /* WeekHeaderView.swift */,
 				97A4E4011C5A79F900890D89 /* CalendarView.xib */,
 				97A4E4091C5A7A2900890D89 /* DayCollectionCell.xib */,
-				97A4E4111C5A7A6E00890D89 /* MonthCollectionCell.xib */,
-				97A4E40D1C5A7A4900890D89 /* WeekHeaderView.xib */,
 				972638461DDB8AB700084C70 /* LaunchScreen.storyboard */,
 				972638481DDB8AB700084C70 /* Main.storyboard */,
+				97A4E4111C5A7A6E00890D89 /* MonthCollectionCell.xib */,
+				97A4E40B1C5A7A3D00890D89 /* WeekHeaderView.swift */,
+				97A4E40D1C5A7A4900890D89 /* WeekHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,8 +173,8 @@
 				97A4E4051C5A7A1100890D89 /* Date.swift */,
 				97A4E3FD1C5A79E000890D89 /* DateExtension.swift */,
 				97A4E4071C5A7A1C00890D89 /* DayCollectionCell.swift */,
-				97A4E40F1C5A7A5700890D89 /* MonthCollectionCell.swift */,
 				9777218F1E63902300F5611D /* ErrorHandling.swift */,
+				97A4E40F1C5A7A5700890D89 /* MonthCollectionCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +227,9 @@
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -246,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97A4E4021C5A79F900890D89 /* CalendarView.xib in Resources */,
+				97160D7C201F851C00D09CCB /* GoogleService-Info.plist in Resources */,
 				97A4E40A1C5A7A2900890D89 /* DayCollectionCell.xib in Resources */,
 				97A4E40E1C5A7A4900890D89 /* WeekHeaderView.xib in Resources */,
 				97A4E4121C5A7A6E00890D89 /* MonthCollectionCell.xib in Resources */,
@@ -265,11 +281,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lent 2018/Pods-Lent 2018-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

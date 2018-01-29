@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="E70-0n-8lq">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="0YK-r1-uBu">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingScene" id="Hdl-BS-Eey" customClass="OnboardingViewController" customModule="Lent_2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pAp-7d-AF1"/>
+                        <viewControllerLayoutGuide type="bottom" id="jWw-yl-eVc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Csw-qu-jvz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nc1-rH-tgC" customClass="OnboardingView" customModule="OnboardingKit">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-E2-8pP">
+                                <rect key="frame" x="47.333333333333343" y="664" width="281" height="44"/>
+                                <color key="backgroundColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="yfn-mQ-ysd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="E70-0n-8lq" kind="show" id="sQd-13-lK5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="nc1-rH-tgC" firstAttribute="height" secondItem="Csw-qu-jvz" secondAttribute="height" id="Eoe-uC-zcZ"/>
+                            <constraint firstItem="jWw-yl-eVc" firstAttribute="top" secondItem="Kcw-E2-8pP" secondAttribute="bottom" constant="70" id="REZ-h1-Agc"/>
+                            <constraint firstItem="Kcw-E2-8pP" firstAttribute="width" secondItem="Csw-qu-jvz" secondAttribute="width" multiplier="3/4" id="bpS-gn-3WD"/>
+                            <constraint firstItem="nc1-rH-tgC" firstAttribute="centerX" secondItem="Csw-qu-jvz" secondAttribute="centerX" id="lhz-UZ-MTP"/>
+                            <constraint firstItem="nc1-rH-tgC" firstAttribute="centerY" secondItem="Csw-qu-jvz" secondAttribute="centerY" id="uOJ-L5-JH7"/>
+                            <constraint firstItem="Kcw-E2-8pP" firstAttribute="centerX" secondItem="Csw-qu-jvz" secondAttribute="centerX" id="usi-QO-iXV"/>
+                            <constraint firstItem="nc1-rH-tgC" firstAttribute="width" secondItem="Csw-qu-jvz" secondAttribute="width" id="wxb-sr-dNf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beginButton" destination="Kcw-E2-8pP" id="EhO-LV-exO"/>
+                        <outlet property="onboardingView" destination="nc1-rH-tgC" id="4Tq-8s-g3O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUs-cm-wzJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1487" y="723"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FBp-jR-wsU">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationControllerScene" title="NavigationControllerScene" automaticallyAdjustsScrollViewInsets="NO" id="E70-0n-8lq" userLabel="Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6g4-Du-yRl">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Ng2-be-W4u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOa-PP-Dem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-688" y="724"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="Calendar" id="vXZ-lx-hvc" customClass="CalendarViewController" customModule="Lent_2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_blur" translatesAutoresizingMaskIntoConstraints="NO" id="RIS-ae-fBS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="t50-Wu-mfm">
+                                <rect key="frame" x="0.0" y="88" width="375" height="682"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Lent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f8i-ga-qyS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="aoG-8B-a4j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="42"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="8AN-Pv-h4P">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="210"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="countdownLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="l4M-Ff-e9c" userLabel="Countdown Label">
+                                        <rect key="frame" x="81.333333333333329" y="262" width="212.66666666666669" height="308.66666666666674"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="“Prepare Expectantly”" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7R-UO-nbE">
+                                        <rect key="frame" x="32" y="572.66666666666663" width="311.33333333333331" height="40.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="please tap a day to read its lectionary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ba-Ul-Bgi" userLabel="(please tap a day to read its lectionary)">
+                                        <rect key="frame" x="35.666666666666657" y="615" width="303.66666666666674" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="xOi-py-sFP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QH6-om-Gdq" userLabel="infoButton">
+                                        <rect key="frame" x="172.66666666666666" y="652" width="30" height="30"/>
+                                        <state key="normal" image="icon_info"/>
+                                        <connections>
+                                            <segue destination="9by-WW-LZl" kind="show" identifier="calendarToAbout" id="RUT-BQ-ZV0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="f8i-ga-qyS" firstAttribute="leading" secondItem="t50-Wu-mfm" secondAttribute="leading" id="etr-P6-Yz2"/>
+                                    <constraint firstItem="8AN-Pv-h4P" firstAttribute="leading" secondItem="t50-Wu-mfm" secondAttribute="leading" id="qTz-h0-H41"/>
+                                    <constraint firstAttribute="trailing" secondItem="f8i-ga-qyS" secondAttribute="trailing" id="tZH-fz-cAx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="t50-Wu-mfm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7lM-Eh-esP"/>
+                            <constraint firstItem="t50-Wu-mfm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="9mA-4y-JYx"/>
+                            <constraint firstItem="RIS-ae-fBS" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="BYa-iZ-Ufs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="t50-Wu-mfm" secondAttribute="bottom" constant="8" symbolic="YES" id="FC8-Dm-pLz"/>
+                            <constraint firstAttribute="trailing" secondItem="t50-Wu-mfm" secondAttribute="trailing" id="PwP-Zu-pzJ"/>
+                            <constraint firstItem="RIS-ae-fBS" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="Vo8-zL-Chw"/>
+                            <constraint firstItem="RIS-ae-fBS" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="dJd-27-IsT"/>
+                            <constraint firstItem="RIS-ae-fBS" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="vJe-rj-c9V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dvy-tG-mvl">
+                        <barButtonItem key="backBarButtonItem" title="Calendar" id="HsT-hC-tL3"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countdownLabel" destination="l4M-Ff-e9c" id="mPU-ym-9oS"/>
+                        <outlet property="placeholderView" destination="8AN-Pv-h4P" id="7PC-zV-eUj"/>
+                        <segue destination="4tH-dO-r9E" kind="show" identifier="calendarToLectionary" id="sXf-Yv-UN8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="723"/>
+        </scene>
+        <!--Lectionary-->
+        <scene sceneID="abo-6a-61E">
+            <objects>
+                <viewController storyboardIdentifier="Lectionary View Controller" title="Lectionary" id="4tH-dO-r9E" customClass="LectionaryViewController" customModule="Lent_2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p4N-YH-0j4"/>
+                        <viewControllerLayoutGuide type="bottom" id="BlI-9K-Kkc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jbw-e6-crL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dayTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XIH-Cy-hWw">
+                                <rect key="frame" x="0.0" y="88" width="375" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                <color key="textColor" name="PANTONE 19-3830 Astral Aura"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dayLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-BT-1RK">
+                                <rect key="frame" x="-4" y="126.00000000000001" width="383" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                <color key="textColor" name="PANTONE 19-3830 Astral Aura"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt3-cy-mZj">
+                                <rect key="frame" x="16" y="154.66666666666669" width="343" height="623.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Id9-H8-wtQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="434.66666666666669"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Collect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Da-St-RaL">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                                <color key="backgroundColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collectBodyTextLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kM4-zw-Ku1">
+                                                <rect key="frame" x="0.0" y="31" width="343" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                <color key="textColor" name="PANTONE 19-3830 Astral Aura"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Old Testament" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDp-4K-HLt">
+                                                <rect key="frame" x="0.0" y="61" width="343" height="24"/>
+                                                <color key="backgroundColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oldTestamentTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nbu-xE-eoE">
+                                                <rect key="frame" x="0.0" y="92" width="343" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oldTestamentBodyTextLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4YE-KR-W8p">
+                                                <rect key="frame" x="0.0" y="119.33333333333334" width="343" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                <color key="textColor" name="PANTONE 19-3830 Astral Aura"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Response" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPK-uw-ieB">
+                                                <rect key="frame" x="0.0" y="149.33333333333334" width="343" height="24"/>
+                                                <color key="backgroundColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="psalmTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="5BI-xd-qYN">
+                                                <rect key="frame" x="0.0" y="180.33333333333334" width="343" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="psalmSubtitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EzR-nO-yl8">
+                                                <rect key="frame" x="0.0" y="207.66666666666666" width="343" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="psalmBodyTextLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CN9-Ft-5Gd">
+                                                <rect key="frame" x="0.0" y="235.00000000000003" width="343" height="22.999999999999972"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                <color key="textColor" name="PANTONE 19-3830 Astral Aura"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Epistle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6J-Gx-iJd">
+                                                <rect key="frame" x="0.0" y="265" width="343" height="24"/>
+                                                <color key="backgroundColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="epistleTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y8W-a2-M7I">
+                                                <rect key="frame" x="0.0" y="296" width="343" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="epistleBodyTextLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9R-UB-eUQ">
+                                                <rect key="frame" x="0.0" y="323.33333333333337" width="343" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                <color key="textColor" name="PANTONE 19-3830 Astral Aura"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Gospel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UL-mi-lZK">
+                                                <rect key="frame" x="0.0" y="353.33333333333337" width="343" height="24"/>
+                                                <color key="backgroundColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gospelTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="goF-6c-q8L">
+                                                <rect key="frame" x="0.0" y="384.33333333333337" width="343" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gospelBodyTextLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3v9-Dp-hwb">
+                                                <rect key="frame" x="0.0" y="411.66666666666674" width="343" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                                <color key="textColor" name="PANTONE 19-3830 Astral Aura"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Id9-H8-wtQ" secondAttribute="bottom" id="7Ih-wz-UbR"/>
+                                    <constraint firstItem="Id9-H8-wtQ" firstAttribute="leading" secondItem="nt3-cy-mZj" secondAttribute="leading" id="Q6X-4u-Q8t"/>
+                                    <constraint firstItem="Id9-H8-wtQ" firstAttribute="top" secondItem="nt3-cy-mZj" secondAttribute="top" id="dtN-ao-Tfi"/>
+                                    <constraint firstItem="Id9-H8-wtQ" firstAttribute="width" secondItem="nt3-cy-mZj" secondAttribute="width" id="hos-CM-e6y"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XIH-Cy-hWw" firstAttribute="top" secondItem="p4N-YH-0j4" secondAttribute="bottom" id="01d-MW-mwC"/>
+                            <constraint firstItem="XIH-Cy-hWw" firstAttribute="bottom" secondItem="bcq-BT-1RK" secondAttribute="top" constant="5" id="1OQ-UI-bbj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nt3-cy-mZj" secondAttribute="trailing" id="4wt-WM-T1x"/>
+                            <constraint firstItem="BlI-9K-Kkc" firstAttribute="top" secondItem="nt3-cy-mZj" secondAttribute="bottom" id="8VE-gY-uvU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bcq-BT-1RK" secondAttribute="trailing" constant="-20" id="AlQ-Th-7SR"/>
+                            <constraint firstItem="bcq-BT-1RK" firstAttribute="leading" secondItem="jbw-e6-crL" secondAttribute="leadingMargin" constant="-20" id="Ay8-hd-nXN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XIH-Cy-hWw" secondAttribute="trailing" constant="-16" id="Qhe-Jl-wSL"/>
+                            <constraint firstItem="nt3-cy-mZj" firstAttribute="top" secondItem="bcq-BT-1RK" secondAttribute="bottom" id="TSZ-er-80c"/>
+                            <constraint firstItem="nt3-cy-mZj" firstAttribute="leading" secondItem="jbw-e6-crL" secondAttribute="leadingMargin" id="UQh-9t-mdM"/>
+                            <constraint firstItem="XIH-Cy-hWw" firstAttribute="leading" secondItem="jbw-e6-crL" secondAttribute="leadingMargin" constant="-16" id="ddq-yP-bVl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectBodyTextLabel" destination="kM4-zw-Ku1" id="LxX-DQ-hwc"/>
+                        <outlet property="dayLabel" destination="bcq-BT-1RK" id="Qo5-Fb-sx5"/>
+                        <outlet property="dayTitleLabel" destination="XIH-Cy-hWw" id="leo-YD-koi"/>
+                        <outlet property="epistleBodyTextLabel" destination="V9R-UB-eUQ" id="V5j-rj-7rb"/>
+                        <outlet property="epistleTitleLabel" destination="Y8W-a2-M7I" id="toS-8Y-buf"/>
+                        <outlet property="gospelBodyTextLabel" destination="3v9-Dp-hwb" id="qqp-ut-kgs"/>
+                        <outlet property="gospelTitleLabel" destination="goF-6c-q8L" id="EF6-tt-qhm"/>
+                        <outlet property="oldTestamentBodyTextLabel" destination="4YE-KR-W8p" id="Hqi-sl-EwS"/>
+                        <outlet property="oldTestamentTitleLabel" destination="Nbu-xE-eoE" id="pgB-ul-m23"/>
+                        <outlet property="psalmBodyTextLabel" destination="CN9-Ft-5Gd" id="5dQ-QE-uQP"/>
+                        <outlet property="psalmSubtitleLabel" destination="EzR-nO-yl8" id="RNR-6H-h7n"/>
+                        <outlet property="psalmTitleLabel" destination="5BI-xd-qYN" id="VZQ-xR-ddG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMR-LB-CUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="723"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="RqS-QK-QgJ">
+            <objects>
+                <viewController storyboardIdentifier="AboutScene" title="About" id="9by-WW-LZl" customClass="InfoViewController" customModule="Lent_2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OcT-9Y-IQX"/>
+                        <viewControllerLayoutGuide type="bottom" id="0zu-32-37k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H49-oc-BsY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="95D-8g-h3U">
+                                <rect key="frame" x="23.333333333333343" y="135.66666666666669" width="328.33333333333326" height="541.33333333333326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Lent 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-wk-mkT">
+                                        <rect key="frame" x="0.0" y="0.0" width="328.33333333333331" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="pe5-mx-lyv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="42"/>
+                                        <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="2" height="2"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lent 2018" translatesAutoresizingMaskIntoConstraints="NO" id="bHd-OV-6tE">
+                                        <rect key="frame" x="0.0" y="60" width="328.33333333333331" height="135.33333333333334"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2018 (Build 1)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmF-iN-bVk">
+                                        <rect key="frame" x="0.0" y="207.33333333333334" width="328.33333333333331" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="Zi8-rh-FrB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                                        <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGz-Lh-vb7" userLabel="about">
+                                        <rect key="frame" x="0.0" y="231.33333333333331" width="328.33333333333331" height="133.33333333333331"/>
+                                        <string key="text">With 47 daily office readings from the Revised Common Lectionary (RCL), this lifestyle app helps Christians spiritually prepare during the solemn six-week liturgical season preceding the celebration of our Lord’s resurrection. It offers an interactive calendar and counts down the days until Easter.</string>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TZa-CJ-zhO">
+                                        <rect key="frame" x="0.0" y="376.66666666666674" width="328.33333333333331" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EI5-QJ-5fs" userLabel="shareButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="158.33333333333334" height="44"/>
+                                                <color key="backgroundColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="MaS-jk-dA4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="Share">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="18"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="shareAppButtonTapped:" destination="9by-WW-LZl" eventType="touchUpInside" id="rcy-pd-9Or"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-ao-yV2" userLabel="devURLButton">
+                                                <rect key="frame" x="170.33333333333331" y="0.0" width="158" height="44"/>
+                                                <color key="backgroundColor" name="PANTONE PQ-201C Alabama Crimson"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="hrq-gQ-bgE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="Developer Website">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="18"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="developerURLButtonTapped:" destination="9by-WW-LZl" eventType="touchUpInside" id="8Uw-vB-b9Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2Q-l1-dlj" userLabel="copyright">
+                                        <rect key="frame" x="0.0" y="432.66666666666674" width="328.33333333333331" height="108.66666666666663"/>
+                                        <string key="text">Collects are from The Proper for the Lesser Feasts and Fasts, © 2003 by The Church Pension Fund, and used by permission. All rights reserved. Texts of the Old Testament, Epistles, and Gospel are from The Holy Bible: New Revised Standard Version, © 1989 by the Division of Christian Education of the National Council of the Church of Christ in the U.S.A., and used by permission. All rights reserved. Psalms are from The Book of Common Prayer, 1979.</string>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                                        <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bHd-OV-6tE" firstAttribute="height" secondItem="95D-8g-h3U" secondAttribute="height" multiplier="1/4" id="6gP-Bt-XHU"/>
+                                    <constraint firstItem="W2Q-l1-dlj" firstAttribute="height" secondItem="95D-8g-h3U" secondAttribute="height" multiplier="1/5" id="E2a-uB-qer"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="95D-8g-h3U" firstAttribute="centerY" secondItem="H49-oc-BsY" secondAttribute="centerY" id="AsU-Gf-6HY"/>
+                            <constraint firstItem="95D-8g-h3U" firstAttribute="width" secondItem="H49-oc-BsY" secondAttribute="width" multiplier="7/8" id="Pzi-Ei-C67"/>
+                            <constraint firstItem="95D-8g-h3U" firstAttribute="height" secondItem="H49-oc-BsY" secondAttribute="height" multiplier="2/3" id="ZpW-H1-crP"/>
+                            <constraint firstItem="95D-8g-h3U" firstAttribute="centerX" secondItem="H49-oc-BsY" secondAttribute="centerX" id="dRH-7o-INU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l4v-7l-kGz"/>
+                    <connections>
+                        <outlet property="versionLabel" destination="mmF-iN-bVk" id="wMn-LY-q9D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rNX-rP-MfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="1456"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Lent 2018" width="1124" height="1124"/>
+        <image name="background_blur" width="1024" height="1024"/>
+        <image name="icon_info" width="30" height="30"/>
+        <namedColor name="PANTONE 18-3838 Ultra Violet">
+            <color red="0.37254901960784315" green="0.29411764705882354" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="PANTONE 19-3830 Astral Aura">
+            <color red="0.21176470588235294" green="0.19215686274509805" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="PANTONE PQ-201C Alabama Crimson">
+            <color red="0.61568627450980395" green="0.13333333333333333" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
