@@ -30,7 +30,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-E2-8pP">
                                 <rect key="frame" x="47.333333333333343" y="664" width="281" height="44"/>
-                                <color key="backgroundColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.28627450980392155" green="0.2196078431372549" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="yfn-mQ-ysd"/>
                                 </constraints>
@@ -369,10 +369,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="95D-8g-h3U">
-                                <rect key="frame" x="23.333333333333343" y="135.66666666666669" width="328.33333333333326" height="541.33333333333326"/>
+                                <rect key="frame" x="12" y="108" width="351" height="630"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Lent 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-wk-mkT">
-                                        <rect key="frame" x="0.0" y="0.0" width="328.33333333333331" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="pe5-mx-lyv"/>
                                         </constraints>
@@ -382,10 +382,10 @@
                                         <size key="shadowOffset" width="2" height="2"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lent 2018" translatesAutoresizingMaskIntoConstraints="NO" id="bHd-OV-6tE">
-                                        <rect key="frame" x="0.0" y="60" width="328.33333333333331" height="135.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="60.000000000000014" width="351" height="157.33333333333337"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2018 (Build 1)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmF-iN-bVk">
-                                        <rect key="frame" x="0.0" y="207.33333333333334" width="328.33333333333331" height="12"/>
+                                        <rect key="frame" x="0.0" y="229.33333333333331" width="351" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="Zi8-rh-FrB"/>
                                         </constraints>
@@ -394,7 +394,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGz-Lh-vb7" userLabel="about">
-                                        <rect key="frame" x="0.0" y="231.33333333333331" width="328.33333333333331" height="133.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="253.33333333333331" width="351" height="182.33333333333331"/>
                                         <string key="text">With 47 daily office readings from the Revised Common Lectionary (RCL), this lifestyle app helps Christians spiritually prepare during the solemn six-week liturgical season preceding the celebration of our Lord’s resurrection. It offers an interactive calendar and counts down the days until Easter.</string>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                         <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
@@ -402,10 +402,10 @@
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="TZa-CJ-zhO">
-                                        <rect key="frame" x="0.0" y="376.66666666666674" width="328.33333333333331" height="44"/>
+                                        <rect key="frame" x="0.0" y="447.66666666666663" width="351" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EI5-QJ-5fs" userLabel="shareButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="158.33333333333334" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="44"/>
                                                 <color key="backgroundColor" name="PANTONE 18-3838 Ultra Violet"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="MaS-jk-dA4"/>
@@ -425,7 +425,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-ao-yV2" userLabel="devURLButton">
-                                                <rect key="frame" x="170.33333333333331" y="0.0" width="158" height="44"/>
+                                                <rect key="frame" x="181.66666666666663" y="0.0" width="169.33333333333337" height="44"/>
                                                 <color key="backgroundColor" name="PANTONE PQ-201C Alabama Crimson"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="hrq-gQ-bgE"/>
@@ -447,7 +447,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2Q-l1-dlj" userLabel="copyright">
-                                        <rect key="frame" x="0.0" y="432.66666666666674" width="328.33333333333331" height="108.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="503.66666666666657" width="351" height="126.33333333333331"/>
                                         <string key="text">Collects are from The Proper for the Lesser Feasts and Fasts, © 2003 by The Church Pension Fund, and used by permission. All rights reserved. Texts of the Old Testament, Epistles, and Gospel are from The Holy Bible: New Revised Standard Version, © 1989 by the Division of Christian Education of the National Council of the Church of Christ in the U.S.A., and used by permission. All rights reserved. Psalms are from The Book of Common Prayer, 1979.</string>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                         <color key="textColor" name="PANTONE 18-3838 Ultra Violet"/>
@@ -463,10 +463,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="95D-8g-h3U" firstAttribute="centerY" secondItem="H49-oc-BsY" secondAttribute="centerY" id="AsU-Gf-6HY"/>
-                            <constraint firstItem="95D-8g-h3U" firstAttribute="width" secondItem="H49-oc-BsY" secondAttribute="width" multiplier="7/8" id="Pzi-Ei-C67"/>
-                            <constraint firstItem="95D-8g-h3U" firstAttribute="height" secondItem="H49-oc-BsY" secondAttribute="height" multiplier="2/3" id="ZpW-H1-crP"/>
+                            <constraint firstItem="95D-8g-h3U" firstAttribute="leading" secondItem="H49-oc-BsY" secondAttribute="leading" constant="12" id="L9g-4Z-dUf"/>
+                            <constraint firstItem="95D-8g-h3U" firstAttribute="top" secondItem="OcT-9Y-IQX" secondAttribute="bottom" constant="20" id="Xlp-yb-TSG"/>
                             <constraint firstItem="95D-8g-h3U" firstAttribute="centerX" secondItem="H49-oc-BsY" secondAttribute="centerX" id="dRH-7o-INU"/>
+                            <constraint firstItem="0zu-32-37k" firstAttribute="top" secondItem="95D-8g-h3U" secondAttribute="bottom" constant="40" id="eBK-Wx-ACh"/>
+                            <constraint firstAttribute="trailing" secondItem="95D-8g-h3U" secondAttribute="trailing" constant="12" id="gtr-85-2sd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l4v-7l-kGz"/>

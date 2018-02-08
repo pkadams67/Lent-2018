@@ -39,7 +39,6 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
     func populateDates() {
         if logic != nil {
             dates                          = [Date]()
-            // lentDays = []
             dates                          += logic!.previousMonthVisibleDays!
             dates                          += logic!.currentMonthDays!
             dates                          += logic!.nextMonthVisibleDays!

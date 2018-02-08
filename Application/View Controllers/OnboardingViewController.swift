@@ -9,7 +9,7 @@ public final class OnboardingViewController: UIViewController {
     @IBOutlet weak var onboardingView: OnboardingView!
     @IBOutlet weak var beginButton: UIButton!
     
-    private let model = DataModel()
+    private let model = OnboardingData()
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +18,14 @@ public final class OnboardingViewController: UIViewController {
         onboardingView.dataSource = model
         onboardingView.delegate   = model
         model.didShow             = { page in
-            if page == 3 {
+            if page == 4 {
                 UIView.animate(withDuration: 0.3) {
                     self.beginButton.alpha = 1
                 }
             }
         }
         model.willShow = { page in
-            if page != 3 {
+            if page != 4 {
                 self.beginButton.alpha = 0
             }
         }

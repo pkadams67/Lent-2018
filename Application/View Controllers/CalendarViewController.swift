@@ -8,10 +8,6 @@ class CalendarViewController: UIViewController, CalendarViewDelegate {
     @IBOutlet var placeholderView: UIView!
     @IBOutlet weak var countdownLabel: UILabel!
     
-    //    @IBAction func crashButtonTapped(sender: AnyObject) {
-    //        Crashlytics.sharedInstance().crash()
-    //    }
-    
     var firstRun: Bool = true
     var easterDay = Foundation.Date()
     
@@ -27,12 +23,6 @@ class CalendarViewController: UIViewController, CalendarViewDelegate {
         placeholderView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[calendarView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["calendarView": calendarView]))
         let currentYear: Int = (Calendar.current as NSCalendar).components(.year, from: Foundation.Date()).year!
         easterDay = Foundation.Date.date(1, month: 4, year: currentYear)
-        // Force a Crash (disable for release)
-        //        let button = UIButton(type: UIButtonType.RoundedRect)
-        //        button.frame = CGRectMake(20, 50, 100, 30)
-        //        button.setTitle("Crash", forState: UIControlState.Normal)
-        //        button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-        //        view.addSubview(button)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
