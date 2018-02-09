@@ -14,6 +14,7 @@
 		97726DB1201D2E5B00E5066E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97726DB0201D2E5B00E5066E /* OnboardingViewController.swift */; };
 		977721881E62FCA700F5611D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977721871E62FCA700F5611D /* InfoViewController.swift */; };
 		977721911E63902300F5611D /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9777218F1E63902300F5611D /* ErrorHandling.swift */; };
+		977913F6202DDB5100842F1D /* ChurchBells.wav in Resources */ = {isa = PBXBuildFile; fileRef = 977913F5202DDB5100842F1D /* ChurchBells.wav */; };
 		9797E54A202CD77C00220EF4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9797E549202CD77C00220EF4 /* NotificationService.swift */; };
 		9797E54E202CD77C00220EF4 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9797E547202CD77C00220EF4 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		97A4E3EE1C5A78CC00890D89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A4E3ED1C5A78CC00890D89 /* AppDelegate.swift */; };
@@ -73,6 +74,7 @@
 		97726DB0201D2E5B00E5066E /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		977721871E62FCA700F5611D /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		9777218F1E63902300F5611D /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		977913F5202DDB5100842F1D /* ChurchBells.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ChurchBells.wav; sourceTree = "<group>"; };
 		977B87B21BF721A800CDE6C6 /* Lent 2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lent 2018.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9797E547202CD77C00220EF4 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9797E549202CD77C00220EF4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -146,11 +148,12 @@
 			isa = PBXGroup;
 			children = (
 				97396303201FB4DA0036E8DE /* Application */,
-				97C3C7F51DDE511D0034C808 /* Frameworks */,
+				974622391F5B652A00C6F37C /* Support */,
 				9797E548202CD77C00220EF4 /* OneSignalNotificationServiceExtension */,
+				97C3C7F51DDE511D0034C808 /* Frameworks */,
 				AE410F33BF48A6D37FB3148E /* Pods */,
 				977B87B31BF721A800CDE6C6 /* Products */,
-				974622391F5B652A00C6F37C /* Support */,
+				977913F5202DDB5100842F1D /* ChurchBells.wav */,
 			);
 			sourceTree = "<group>";
 		};
@@ -346,6 +349,7 @@
 				97A4E40E1C5A7A4900890D89 /* WeekHeaderView.xib in Resources */,
 				97A4E4121C5A7A6E00890D89 /* MonthCollectionCell.xib in Resources */,
 				9726384A1DDB8AB700084C70 /* LaunchScreen.storyboard in Resources */,
+				977913F6202DDB5100842F1D /* ChurchBells.wav in Resources */,
 				9726384B1DDB8AB700084C70 /* Main.storyboard in Resources */,
 				97A4E4141C5A7A9100890D89 /* Lent 2018-Assets.xcassets in Resources */,
 			);
