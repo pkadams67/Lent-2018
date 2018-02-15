@@ -5,6 +5,7 @@ import Firebase
 import Fabric
 import Crashlytics
 import OneSignal
+import Siren
 
 @UIApplicationMain
 
@@ -40,7 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             OneSignal.promptForPushNotifications(userResponse: { accepted in
                 print("User accepted notifications: \(accepted)")
             })
-            
             print("\nUser presented Main Scene\n")
         } else {
             UserDefaults.standard.set(true, forKey: "launchedBefore")
@@ -52,10 +52,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("\nUser presented Onboarding Scene\n")
         }
         
+        setupSiren()
+        
         // TODO: Move this to where you establish a user session
         self.logUser()
         
         return true
+    }
+    
+    func setupSiren() {
+        let siren            = Siren.shared
+        siren.delegate       = self
+        siren.debugEnabled   = true
+        siren.alertType      = .option // .option, .force, .skip, .none
+        siren.alertMessaging = SirenAlertMessaging(updateTitle: "New Version Now Available",
+                                                   updateMessage: "Would you like this update?",
+                                                   updateButtonMessage: "Right Now Please",
+                                                   nextTimeButtonMessage: "Maybe Next Time",
+                                                   skipVersionButtonMessage: "Keep Things “Glitchy”")
+        siren.showAlertAfterCurrentVersionHasBeenReleasedForDays = 1
     }
     
     func logUser() {
@@ -73,11 +88,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
+        Siren.shared.checkVersion(checkType: .immediately)
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
+        Siren.shared.checkVersion(checkType: .daily)
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
+    }
+}
+
+extension AppDelegate: SirenDelegate {
+
+    func sirenDidShowUpdateDialog(alertType: Siren.AlertType) {
+        print(#function, alertType)
+    }
+    
+    func sirenUserDidCancel() {
+        print(#function)
+    }
+    
+    func sirenUserDidSkipVersion() {
+        print(#function)
+    }
+    
+    func sirenUserDidLaunchAppStore() {
+        print(#function)
+    }
+    
+    func sirenDidFailVersionCheck(error: Error) {
+        print(#function, error)
+    }
+    
+    func sirenLatestVersionInstalled() {
+        print(#function, "Latest version of app is installed")
+    }
+    
+    // This delegate method is only hit when alertType is initialized to .none
+    func sirenDidDetectNewVersionWithoutAlert(message: String, updateType: UpdateType) {
+        print(#function, "\(message).\nRelease type: \(updateType.rawValue.capitalized)")
     }
 }

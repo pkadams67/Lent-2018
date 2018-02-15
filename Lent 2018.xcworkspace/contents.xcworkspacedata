@@ -4,16 +4,6 @@
    <FileRef
       location = "group:Lent 2018.xcodeproj">
    </FileRef>
-   <Group
-      location = "group:"
-      name = "Pods">
-      <FileRef
-         location = "group:Pods/Target Support Files/Pods-Lent 2018/Pods-Lent 2018.debug.xcconfig">
-      </FileRef>
-      <FileRef
-         location = "group:Pods/Target Support Files/Pods-Lent 2018/Pods-Lent 2018.release.xcconfig">
-      </FileRef>
-   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>

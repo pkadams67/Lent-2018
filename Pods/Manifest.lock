@@ -24,6 +24,7 @@ PODS:
   - nanopb/encode (0.3.8)
   - OnboardingKit (0.0.5)
   - OneSignal (2.6.2)
+  - Siren (3.2.0)
 
 DEPENDENCIES:
   - Crashlytics (~> 3.10)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - Firebase/Core
   - OnboardingKit
   - OneSignal (< 3.0, >= 2.6.2)
+  - Siren
 
 SPEC CHECKSUMS:
   Crashlytics: a989ef242b66605577a425733797f810bd2725eb
@@ -43,7 +45,8 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   OnboardingKit: 44b085c9e1e191a61fe1caea2bb581645fac1dc1
   OneSignal: 95127bce89b9e495079e7205e3d47c88590b5750
+  Siren: 964f57553cf6a39d1bada4e403557523a213b397
 
-PODFILE CHECKSUM: b53b1f653d8542438c7dafaaf17d24262cd37d3c
+PODFILE CHECKSUM: 36626874280e4ef167e5c6dffeb886652160f272
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

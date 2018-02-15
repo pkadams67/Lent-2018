@@ -64,12 +64,11 @@ public final class OnboardingData: NSObject, OnboardingViewDelegate, OnboardingV
                 image: UIImage(named: "onboard4")!,
                 itemImage: UIImage(named: "number5")!,
                 pageTitle: "Thanks!",
-                pageDescription: "Your device will ask the next time this app loads whether to allow Push Notifications. Please tap “OK” to let us deliver a short message each day this Lenten season.",
+                pageDescription: "Your device will ask the next time this app loads whether to allow Push Notifications. Please tap “OK” to let us deliver select “Lenten Tidings.”",
                 backgroundImage: UIImage(named: "background4"),
                 topBackgroundImage: nil,
                 bottomBackgroundImage: UIImage(named: "backgroundWave")
             )
-
             
         default:
             fatalError("Out of range!")
@@ -83,8 +82,8 @@ public final class OnboardingData: NSObject, OnboardingViewDelegate, OnboardingV
         pageView.titleLabel.layer.shadowOffset       = CGSize(width: 0, height: 1)
         pageView.titleLabel.layer.shouldRasterize    = true
         pageView.titleLabel.layer.rasterizationScale = UIScreen.main.scale
-        pageView.titleLabel.font                     = UIFont(name: "HelveticaNeue-Bold", size: 36) ?? UIFont.boldSystemFont(ofSize: 36)
-        pageView.descriptionLabel.font               = UIFont(name: "HelveticaNeue-Thin", size: 17) ?? UIFont.systemFont(ofSize: 17)
+        pageView.titleLabel.font                     = UIFont(name: "HelveticaNeue-Bold", size: 24) ?? UIFont.boldSystemFont(ofSize: 24)
+        pageView.descriptionLabel.font               = UIFont(name: "HelveticaNeue-Thin", size: 14) ?? UIFont.systemFont(ofSize: 14)
     }
     public func onboardingView(_ onboardingView: OnboardingView, didSelectPage page: Int) {
         print("Did select Page #\(page)")
