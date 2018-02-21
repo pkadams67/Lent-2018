@@ -20,14 +20,14 @@ lane :Lent2018 do
 		force: false,
 		save_private_key: true)
 
-  gym(scheme: "Lent 2018")
+  	gym(scheme: "Lent 2018")
 
-  deliver(skip_binary_upload: false,
-    app_identifier: "io.pkadams67.lent2018",
-    metadata_path: "fastlane/metadata",
-    app_rating_config_path: "fastlane/app_rating/ratings_config.json",
-    screenshots_path: "fastlane/screenshots",
-    skip_screenshots: true)
+  	deliver(skip_binary_upload: false,
+    	app_identifier: "io.pkadams67.lent2018",
+    	metadata_path: "fastlane/metadata",
+    	app_rating_config_path: "fastlane/app_rating/ratings_config.json",
+    	screenshots_path: "fastlane/screenshots",
+    	skip_screenshots: true)
 
 end
 

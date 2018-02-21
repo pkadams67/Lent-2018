@@ -1,6 +1,6 @@
 username "paul.k.adams@me.com"
 
-app_version "2018.2"
+app_version "2018.4"
 submit_for_review false
 automatic_release true
 price_tier 5
